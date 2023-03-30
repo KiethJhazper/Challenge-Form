@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="FormStyle.css">
+        <title>Challenge Form</title>
+    </head>
+    <body>
+        <form method="get" enctype="application/x-www-form-urlencoded" action="/action_page.php">
+            <div class = "Top-Section">
+                <p class = "p1">Challenge Form</p>
+            </div>
+            <table class = "Body">
+                <tr>
+                    <td id = "td1">
+                        <table id = "top">
+                            <tr>
+                                <td for="name">Name:</td>
+                                <td><input type = "text" id = "name" name = "name" required size="32.5%"/></td>
+                            </tr>
+                            <tr>
+                                <td for = "phone_number">Phone:</td>
+                                <td><input type = "tel" id = "phone" name = "phone" required size="32.5%"/></td>
+                                </tr>
+                            <tr>
+                                <td for = "email_address">Email:</td>
+                                <td><input type = "email" id = "email" name = "email" required size="32.5%"/></td>
+                            </tr>
+                        </table>
+                    </td>
+
+                    <td id = "td2">
+                        <fieldset>
+                            <legend>Which taxi do you require?</legend>
+                            <p><label> <input type="radio" name="taxi" required value="car"> Car </label></p>
+                            <p><label> <input type="radio" name="taxi" required value="van"> Van </label></p>
+                            <p><label> <input type="radio" name="taxi" required value="tuktuk"> Tuk Tuk </label></p>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            <label>Pickup Date/Time
+                            <input type="datetime-local" name="pickup_time" required>
+                            </label>
+                            </p>
+                                
+                            <p>
+                            <label>Pickup Place
+                            <select id="pickup_place" name="pickup_place">
+                            <option value="" selected="selected">Select One</option>
+                            <option value="office" >Taxi Office</option>
+                            <option value="town_hall" >Town Hall</option>
+                            <option value="telepathy" >We'll Guess!</option>
+                            </select>
+                            </label> 
+                            </p>
+                            
+                            <p>
+                            <label>Dropoff Place
+                            <input type="text" name="dropoff_place" required list="destinations" size="25%">
+                            </label>
+                            
+                            <datalist id="destinations">
+                            <option value="Airport">
+                            <option value="Beach">
+                            <option value="Fred Flinstone's House">
+                            </datalist>
+                            </p>
+                            
+                            <p>
+                            <label>Special Instructions
+                            <textarea name="comments" maxlength="500"></textarea>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Extras</legend>
+                            <p><label> <input type="checkbox" name="extras" value="baby"> Baby Seat </label></p>
+                            <p><label> <input type="checkbox" name="extras" value="wheelchair"> Wheelchair Access </label></p>
+                            <p><label> <input type="checkbox" name="extras" value="tip"> Stock Tip </label></p>
+                        </fieldset>
+                    </td>
+                </tr>
+            </table>
+            <p><button>Submit Booking</button></p>
+        </form>
+    </body>
+</html>
